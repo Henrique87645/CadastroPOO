@@ -30,13 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtCPF = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.dtpDtNascimento = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lstUsuario = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,12 +46,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtVisCPF = new System.Windows.Forms.TextBox();
+            this.txtVisNome = new System.Windows.Forms.TextBox();
+            this.txtVisDtNascimento = new System.Windows.Forms.TextBox();
+            this.txtVisIdade = new System.Windows.Forms.TextBox();
+            this.txtVisEmail = new System.Windows.Forms.TextBox();
+            this.txtVisSenha = new System.Windows.Forms.TextBox();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -74,34 +74,34 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nome:";
             // 
-            // textBox1
+            // txtCPF
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 22);
-            this.textBox1.TabIndex = 2;
+            this.txtCPF.Location = new System.Drawing.Point(26, 32);
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(148, 22);
+            this.txtCPF.TabIndex = 2;
             // 
-            // textBox2
+            // txtNome
             // 
-            this.textBox2.Location = new System.Drawing.Point(180, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(387, 22);
-            this.textBox2.TabIndex = 3;
+            this.txtNome.Location = new System.Drawing.Point(180, 32);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(387, 22);
+            this.txtNome.TabIndex = 3;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(26, 108);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(394, 22);
-            this.textBox3.TabIndex = 4;
+            this.txtEmail.Location = new System.Drawing.Point(26, 108);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(394, 22);
+            this.txtEmail.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // dtpDtNascimento
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(573, 32);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(112, 22);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtpDtNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDtNascimento.Location = new System.Drawing.Point(573, 32);
+            this.dtpDtNascimento.Name = "dtpDtNascimento";
+            this.dtpDtNascimento.Size = new System.Drawing.Size(132, 22);
+            this.dtpDtNascimento.TabIndex = 5;
             // 
             // label3
             // 
@@ -121,12 +121,12 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Email:";
             // 
-            // textBox4
+            // txtSenha
             // 
-            this.textBox4.Location = new System.Drawing.Point(426, 108);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(279, 22);
-            this.textBox4.TabIndex = 8;
+            this.txtSenha.Location = new System.Drawing.Point(426, 108);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(279, 22);
+            this.txtSenha.TabIndex = 8;
             // 
             // label5
             // 
@@ -145,6 +145,7 @@
             this.lstUsuario.Name = "lstUsuario";
             this.lstUsuario.Size = new System.Drawing.Size(681, 148);
             this.lstUsuario.TabIndex = 10;
+            this.lstUsuario.DoubleClick += new System.EventHandler(this.lstUsuario_DoubleClick);
             // 
             // label6
             // 
@@ -167,7 +168,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(147, 365);
+            this.label8.Location = new System.Drawing.Point(177, 365);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 16);
             this.label8.TabIndex = 13;
@@ -176,7 +177,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(533, 365);
+            this.label9.Location = new System.Drawing.Point(569, 365);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(114, 16);
             this.label9.TabIndex = 14;
@@ -185,7 +186,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(672, 365);
+            this.label10.Location = new System.Drawing.Point(708, 365);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 16);
             this.label10.TabIndex = 15;
@@ -209,47 +210,47 @@
             this.label12.TabIndex = 17;
             this.label12.Text = "Senha:";
             // 
-            // textBox5
+            // txtVisCPF
             // 
-            this.textBox5.Location = new System.Drawing.Point(26, 384);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(118, 22);
-            this.textBox5.TabIndex = 18;
+            this.txtVisCPF.Location = new System.Drawing.Point(26, 384);
+            this.txtVisCPF.Name = "txtVisCPF";
+            this.txtVisCPF.Size = new System.Drawing.Size(148, 22);
+            this.txtVisCPF.TabIndex = 18;
             // 
-            // textBox6
+            // txtVisNome
             // 
-            this.textBox6.Location = new System.Drawing.Point(147, 384);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(380, 22);
-            this.textBox6.TabIndex = 19;
+            this.txtVisNome.Location = new System.Drawing.Point(180, 384);
+            this.txtVisNome.Name = "txtVisNome";
+            this.txtVisNome.Size = new System.Drawing.Size(387, 22);
+            this.txtVisNome.TabIndex = 19;
             // 
-            // textBox7
+            // txtVisDtNascimento
             // 
-            this.textBox7.Location = new System.Drawing.Point(536, 384);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(133, 22);
-            this.textBox7.TabIndex = 20;
+            this.txtVisDtNascimento.Location = new System.Drawing.Point(572, 384);
+            this.txtVisDtNascimento.Name = "txtVisDtNascimento";
+            this.txtVisDtNascimento.Size = new System.Drawing.Size(133, 22);
+            this.txtVisDtNascimento.TabIndex = 20;
             // 
-            // textBox8
+            // txtVisIdade
             // 
-            this.textBox8.Location = new System.Drawing.Point(675, 384);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(92, 22);
-            this.textBox8.TabIndex = 21;
+            this.txtVisIdade.Location = new System.Drawing.Point(711, 384);
+            this.txtVisIdade.Name = "txtVisIdade";
+            this.txtVisIdade.Size = new System.Drawing.Size(92, 22);
+            this.txtVisIdade.TabIndex = 21;
             // 
-            // textBox9
+            // txtVisEmail
             // 
-            this.textBox9.Location = new System.Drawing.Point(26, 483);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(380, 22);
-            this.textBox9.TabIndex = 22;
+            this.txtVisEmail.Location = new System.Drawing.Point(26, 483);
+            this.txtVisEmail.Name = "txtVisEmail";
+            this.txtVisEmail.Size = new System.Drawing.Size(394, 22);
+            this.txtVisEmail.TabIndex = 22;
             // 
-            // textBox10
+            // txtVisSenha
             // 
-            this.textBox10.Location = new System.Drawing.Point(426, 483);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(259, 22);
-            this.textBox10.TabIndex = 23;
+            this.txtVisSenha.Location = new System.Drawing.Point(426, 483);
+            this.txtVisSenha.Name = "txtVisSenha";
+            this.txtVisSenha.Size = new System.Drawing.Size(281, 22);
+            this.txtVisSenha.TabIndex = 23;
             // 
             // btnAdicionar
             // 
@@ -259,6 +260,7 @@
             this.btnAdicionar.TabIndex = 24;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // btnRemover
             // 
@@ -268,6 +270,7 @@
             this.btnRemover.TabIndex = 25;
             this.btnRemover.Text = "Remover";
             this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // Form1
             // 
@@ -277,12 +280,12 @@
             this.ClientSize = new System.Drawing.Size(821, 539);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.btnAdicionar);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtVisSenha);
+            this.Controls.Add(this.txtVisEmail);
+            this.Controls.Add(this.txtVisIdade);
+            this.Controls.Add(this.txtVisDtNascimento);
+            this.Controls.Add(this.txtVisNome);
+            this.Controls.Add(this.txtVisCPF);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -292,13 +295,13 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lstUsuario);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dtpDtNascimento);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -312,13 +315,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtCPF;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.DateTimePicker dtpDtNascimento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox lstUsuario;
         private System.Windows.Forms.Label label6;
@@ -328,12 +331,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtVisCPF;
+        private System.Windows.Forms.TextBox txtVisNome;
+        private System.Windows.Forms.TextBox txtVisDtNascimento;
+        private System.Windows.Forms.TextBox txtVisIdade;
+        private System.Windows.Forms.TextBox txtVisEmail;
+        private System.Windows.Forms.TextBox txtVisSenha;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.Button btnRemover;
     }
