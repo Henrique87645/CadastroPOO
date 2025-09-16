@@ -13,6 +13,16 @@ namespace CadastroPOO
         public decimal SalarioBase { get; set; }
         public DateTime DtAdmissao { get; set; }
 
+        public string CadFuncionario
+        {
+            get
+            {
+                return Nome.ToUpper() + " - " + CPF + " - " + TempoDeServico + " - " + SalarioBase;
+                //Ex: 12345678901 - Henrique
+                //ToUpper() - retorna o testo em maiusculo
+            }
+        }
+
         public int TempoDeServico
         {
             get

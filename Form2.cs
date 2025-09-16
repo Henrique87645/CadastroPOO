@@ -21,6 +21,7 @@ namespace CadastroPOO
         {
             lstUsuario.DataSource = null;
             lstUsuario.DataSource = sistemaExecucao.ListarTodos();
+            lstUsuario.DisplayMember = "CadFuncionario";
         }
 
         Funcionario ExtrairFuncionario()
@@ -50,7 +51,7 @@ namespace CadastroPOO
                 if (novoFuncionario != null)
                 {
                     sistemaExecucao.Adicionar(novoFuncionario); ;
-                    AtualizarListBox(); // Atualiza a ListBox após adicionar o funcionário
+                    //AtualizarListBox(); // Atualiza a ListBox após adicionar o funcionário
                 }
 
                 // Limpeza dos campos
