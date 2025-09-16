@@ -20,7 +20,7 @@ namespace CadastroPOO
             get
             {
                 return CPFNome + " - " + Email;
-                //Ex: 12345678901 - Henrique@gmail.com
+                //Ex: 12345678901 - Henrique1 - Henrique@gmail.com
             }
         }
     }
